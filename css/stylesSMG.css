@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://png.pngtree.com/background/20230114/original/pngtree-blue-science-and-technology-starry-sky-business-corporate-advertising-poster-background-picture-image_2007446.jpg');
+    background-size: cover;
+    background-position: center;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    background: rgba(148, 211, 228, 0.8);
+    padding: 2px;
+    position: fixed;
+    height: 100%;
+}
+nav a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+nav a:hover {
+    background: rgba(255, 183, 77, 0.8);
+}
+.top-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: fixed;
+    width: calc(100% - 160px);
+    top: 0;
+    left: 160px;
+    z-index: 1000;
+}
+.top-bar div {
+    color: rgb(43, 218, 224);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.top-bar .user-info {
+    display: flex;
+    align-items: center;
+}
+.top-bar .user-info span {
+    margin-left: 10px;
+    color: white;
+}
+.top-bar .notifications {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.top-bar .notifications img {
+    width: 30px;
+    height: 30px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background: rgba(255, 183, 77, 0.8);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.container {
+    margin-left: 170px;
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+}
+.welcome-title {
+    font-size: 80px; /* Taille agrandie */
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+.system {
+    margin-left: 5px; /* Petit espace entre "our" et "System" */
+}
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent; /* Taille réduite */
+    border-right: 4px solid transparent; /* Taille réduite */
+    border-top: 8px solid orange; /* Triangle de couleur orange */
+    margin-left: 5px; /* Espace avant le triangle */
+}

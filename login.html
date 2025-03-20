@@ -4,68 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://okrinternational.com/wp-content/uploads/2023/06/OKR-Examples-in-Auditing-scaled.jpg'); /* Remplacez par l'URL de votre image */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background: rgba(255, 255, 255, 0.8); /* Couleur de fond avec transparence */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        h2 {
-            text-align: center;
-        }
-        input[type="text"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: orange;
-            border: none;
-            border-radius: 4px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: darkorange;
-        }
-        .error {
-            color: red;
-            text-align: center;
-        }
-        .forgot-password {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .forgot-password a {
-            color: orange;
-            text-decoration: none;
-        }
-        .show-password {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styleslogin.css">
+    <script src="js/script.js" defer></script>
+
 </head>
 <body>
 
@@ -92,36 +33,6 @@
     </div>
 </div>
 
-<script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêche le rechargement de la page
-        const loginType = document.getElementById('login-type').value;
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        // Vérifiez les informations d'identification
-        if (username === 'admin' && password === 'password' && loginType === 'smg_system') {
-            alert('SMG System login successful!');
-        } else if (username === 'user' && password === 'password' && loginType === 'qa_technic') {
-            alert('QA Technic login successful!');
-        } else if (username === 'global' && password === 'password' && loginType === 'global_certification') {
-            alert('Global Certification login successful!');
-        } else {
-            document.getElementById('error-message').textContent = 'Invalid username or password.';
-        }
-    });
-
-    document.getElementById('forgot-password').addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche le lien de rediriger
-        alert('A password reset link has been sent to your email address.');
-    });
-
-    // Fonction pour afficher/masquer le mot de passe
-    document.getElementById('toggle-password').addEventListener('change', function() {
-        const passwordField = document.getElementById('password');
-        passwordField.type = this.checked ? 'text' : 'password';
-    });
-</script>
 
 </body>
 </html>
