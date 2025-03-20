@@ -1,0 +1,393 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Welcome To Excellence Hub</title> 
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: white; 
+            color: rgb(66, 5, 73); 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            height: 70vh; 
+            position: relative; 
+        }
+        h1 { 
+            font-family: 'Breezy', sans-serif; 
+            font-size: 70px; 
+            margin-top: 5px; 
+            margin-bottom: 0px; 
+            text-align: left; 
+        }
+        p { 
+            font-size: 20px; 
+            line-height: 1.6; 
+            width: 60%; 
+            margin: 10px 0; 
+            padding: 10px; 
+            text-align: left; 
+            font-family: 'Times New Roman', Times, serif; 
+        }
+        .logo { 
+            width: 250px; 
+            height: auto; 
+            margin-top: 40px; 
+            margin-bottom: 35px; 
+        }
+        .login-button {
+            width: 120px; 
+            height: 40px; 
+            background-color: orange; 
+            color: white; 
+            border: none; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+            z-index: 4; 
+        }
+        .bottom-image, .bottom-image-second, .bottom-image-third, .bottom-image-fourth, .bottom-image-fifth, .bottom-image-sixth, .bottom-image-seventh { 
+            position: absolute; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid orange; 
+            z-index: 2; 
+        }
+        .bottom-image { 
+            width: 600px; 
+            height: 600px; 
+            bottom: -750px; 
+            right: -20px; 
+            border: 10px solid orange; 
+        }
+        .bottom-image-second { 
+            width: 250px; 
+            height: 250px; 
+            bottom: -450px; 
+            right: 450px; 
+        }
+        .bottom-image-third { 
+            width: 350px; 
+            height: 350px; 
+            bottom: -210px; 
+            right: 5px; 
+        }
+        .bottom-image-fourth { 
+            width: 20px; 
+            height: 20px; 
+            bottom: -600px; 
+            left: 60px; 
+        }
+        .bottom-image-fifth { 
+            width: 20px; 
+            height: 20px; 
+            bottom: -650px; 
+            left: 60px; 
+        }
+        .bottom-image-sixth { 
+            width: 20px; 
+            height: 20px; 
+            bottom: -700px; 
+            left: 60px; 
+        }
+        .bottom-image-seventh { 
+            width: 20px; 
+            height: 20px; 
+            bottom: -550px; 
+            left: 60px; 
+        }
+        .ellipse, .ellipse-second, .ellipse-top, .ellipse-top-second { 
+            width: 2400px; 
+            height: 300px; 
+            border-radius: 50%; 
+            position: absolute; 
+            left: 10%; 
+            transform: translateX(-50%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; 
+            padding-top: 20px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+            clip-path: ellipse(50% 100% at 50% 100%); 
+            z-index: 1; 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 30px; 
+            font-weight: bold; 
+            color: orange; 
+        }
+        .ellipse { 
+            background: radial-gradient(circle, rgba(208, 205, 208, 0.923) 0%, rgba(208, 205, 208, 0.923) 100%); 
+            bottom: -700px; 
+        }
+        .ellipse-second { 
+            background: radial-gradient(circle, rgb(46, 3, 46) 0%, rgb(46, 3, 46) 100%); 
+            bottom: -750px; 
+            display: flex; 
+            align-items: flex-start; 
+            padding-top: 20px; 
+        }
+        .ellipse-top { 
+            background: radial-gradient(circle, rgba(208, 205, 208) 0%, rgba(208, 205, 208) 100%); 
+            top: -100px; 
+            right: -1100px; 
+            left: auto; 
+            width: 1000px; 
+            height: 300px; 
+        }
+        .ellipse-top-second { 
+            background: radial-gradient(circle, rgb(57, 6, 54, 0.923) 0%, rgb(57, 6, 54, 0.923) 100%); 
+            top: -140px; 
+            right: -1100px; 
+            left: auto; 
+            width: 1000px; 
+            height: 300px; 
+        }
+        .location { 
+            font-size: 13px; 
+            font-weight: bold; 
+            color: rgb(255, 255, 255); 
+            text-align: center; 
+            margin-top: 20px; 
+            position: absolute; 
+            left: 13%; 
+            transform: translateX(-50%); 
+            z-index: 3; 
+        }
+        .location { 
+            bottom: -543px; 
+        }
+        .contact { 
+            font-size: 13px; 
+            font-weight: bold; 
+            color: rgb(255, 255, 255); 
+            text-align: center; 
+            margin-top: 20px; 
+            position: absolute; 
+            left: 13%; 
+            bottom: -590px; 
+            /* Positioning the contact number inside the ellipse */ 
+            transform: translateX(-50%); 
+            z-index: 3; 
+        }
+        .email { 
+            font-size: 14px; 
+            font-weight: bold; 
+            color: rgb(255, 255, 255); 
+            text-align: center; 
+            margin-top: 20px; 
+            position: absolute; 
+            left: 16%; 
+            bottom: -640px; 
+            /* Positioning the email text inside the space between the two ellipses */ 
+            transform: translateX(-50%); 
+            z-index: 3; 
+        }
+        /* Rectangle aux coins arrondis */
+        .small-rectangle { 
+            position: absolute; 
+            width: 190px; 
+            height: 60px; 
+            background-color: orange; 
+            border-radius: 15px; 
+            /* Coins arrondis */ 
+            bottom: -30px; 
+            right: 870px; 
+            z-index: 4; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: white; 
+        }
+        /* Rectangle en haut de page */
+        .top-small-rectangle {
+            position: absolute;
+            width: 120px; /* Largeur réduite */
+            height: 40px; /* Hauteur réduite */
+            background-color: orange;
+            border-radius: 10px; /* Coins arrondis */
+            top: 20px; /* Positionnement */
+            right: 20px; /* Positionnement */
+            z-index: 4;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            font-size: 14px; /* Taille de police réduite */
+            font-weight: bold;
+            color: white;
+        }
+
+        .conseil-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: #000000; /* Orange */
+            text-align: center;
+            position: absolute; /* Allows precise positioning */
+            top: 460px; /* Adjust vertical position */
+            left: 14%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        /* New Audit text styling */
+        .audit-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            top: 580px; /* Adjust vertical position */
+            left: 14%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        /* New Formation text styling */
+        .formation-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            top: 680px; /* Adjust vertical position */
+            left: 16%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        /* New Laboratoire text styling */
+        .laboratoire-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            top: 480px; /* Adjust vertical position */
+            left: 37%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        /* New Achats & Sourcing text styling */
+        .achats-sourcing-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            top: 580px; /* Adjust vertical position */
+            left: 40%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        /* New Transformation Digitale text styling */
+        .transformation-digitale-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            top: 680px; /* Adjust vertical position */
+            left: 39%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+
+        /* New Image Styling */
+        .transformation-image {
+            width: 80px; /* Adjust width as needed */
+            height: auto; 
+            position: absolute; 
+            top: 670px; /* Adjust vertical position */
+            left: 26%; /* Center horizontally */
+            transform: translateX(-50%); /* Center alignment */
+        }
+    </style> 
+    <script>
+        function showContactInfo() {
+            alert("Contact Information:\nEmail: contact@excellencehub.ma\nPhone: +212 666 40 49 00\nAddress: Rabat, MOROCCO");
+        }
+    </script>
+</head> 
+<body> 
+    <div class="top-small-rectangle">LOG IN</div>
+    <button class="login-button" onclick="alert('Log in functionality not implemented yet!')">LOG IN</button>
+    <img src="C:\Users\Admin\Downloads\logo_text2 (2).png" alt="Excellence Hub Logo" class="logo"> 
+    <h1> 
+        <span class="line">Welcome To</span> 
+        <span class="line">Excellence Hub</span> 
+    </h1> 
+    <p> 
+        EXCELLENCE HUB is a consulting firm specializing in quality management, health, safety, and sustainable development.<br> 
+        We are a trusted partner for companies seeking excellence. Our experts, engineers, specialized consultants, and trainers have the necessary skills to help you achieve and exceed your goals. 
+    </p> 
+
+    <p class="conseil-text">Conseil</p>
+
+    <!-- New added image right below "Conseil" -->
+    <img src="C:\Users\Admin\Downloads\consiel.svg" alt="Nouvelle Image" style="width: 45px; height: auto; margin: 80px;">
+    
+    <!-- New Formation text -->
+    <div class="formation-text">Formation</div>
+    
+    <!-- New Formation image -->
+    <img src="C:\Users\Admin\Downloads\forma.svg" alt="Image Formation" style="width: 55px; height: auto; margin: 60px; position: absolute; top: 600px; left: 3%; transform: translateX(-50%);">
+    
+    <!-- New Audit text -->
+    <div class="audit-text">Audit</div>
+    
+    <!-- New Audit image -->
+    <img src="C:\Users\Admin\Downloads\audit.svg" alt="Image Audit" style="width: 45px; height: auto; margin: 60px; position: absolute; top: 510px; left: 3%; transform: translateX(-50%);">
+    
+    <!-- New Laboratoire text -->
+    <div class="laboratoire-text">Laboratoire</div>
+    
+    <!-- New Laboratoire image -->
+    <img src="C:\Users\Admin\Downloads\front-view-science-elements-with-chemicals-composition.jpg" alt="Image Laboratoire" style="width: 80px; height: auto; margin: 60px; position: absolute; top: 420px; left: 22%; transform: translateX(-50%);">
+    
+    <!-- New Achats & Sourcing text -->
+    <div class="achats-sourcing-text">Achats & Sourcing</div>
+    
+    <!-- New Image -->
+    <img src="C:\Users\Admin\Downloads\achat.jpg" alt="New Image" class="new-image" style="width: 80px; height: auto; margin: 60px; position: absolute; top: 510px; left: 22%; transform: translateX(-50%);"> <!-- Replace with your image path -->
+
+    <!-- New Transformation Digitale text -->
+    <div class="transformation-digitale-text">
+        Transformation<br>Digitale
+    </div>
+
+    <!-- New image for Transformation Digitale -->
+    <img src="C:\Users\Admin\Downloads\tgrv,.jpg" alt="Transformation Digitale Image" class="transformation-image"> <!-- Replace with your image path -->
+    
+    <img src="C:\Users\Admin\Downloads\v2-dcdba2f8d13bfe1cc5e700c78975ff57_720w.jpg" alt="Image 1" class="bottom-image"> 
+    <img src="C:\Users\Admin\Downloads\mesa-madera-moderna-objetos_700248-31075.avif" alt="Image 2" class="bottom-image-second"> 
+    <img src="C:\Users\Admin\Downloads\entretien-professionnel (1).jpg" alt="Image 3" class="bottom-image-third"> 
+    <!-- New added image --> 
+    <img src="C:\Users\Admin\Downloads\Image1.png" alt="Image 4" class="bottom-image-fourth"> 
+    <!-- Second new image --> 
+    <img src="C:\Users\Admin\Downloads\Image2.png" alt="Image 5" class="bottom-image-fifth"> 
+    <!-- Third new image --> 
+    <img src="C:\Users\Admin\Downloads\Image3.png" alt="Image 6" class="bottom-image-sixth"> 
+    <!-- Fourth new image --> 
+    <img src="C:\Users\Admin\Downloads\Image4.png" alt="Image 7" class="bottom-image-seventh"> 
+    <!-- "Rabat, MOROCCO" text displayed separately --> 
+    <div class="location">Rabat, MOROCCO</div> 
+    <!-- Contact number displayed inside the ellipse --> 
+    <div class="contact">+212 666 40 49 00</div> 
+    <!-- Email address displayed between the two ellipses --> 
+    <div class="email">contact@excellencehub.ma</div> 
+    <div class="ellipse"></div> 
+    <div class="ellipse-second">CONTACT</div> 
+    <div class="ellipse-top"></div> 
+    <div class="ellipse-top-second"></div> 
+    <!-- Rectangle aux coins arrondis avec texte "OUR SERVICES" --> 
+    <div class="small-rectangle" onclick="showContactInfo()" style="cursor: pointer;">OUR SERVICES</div> 
+    <a href="login.html">
+        <button class="login-button">LOG IN</button>
+    </a>    
+</body> 
+</html>

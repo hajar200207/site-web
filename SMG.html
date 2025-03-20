@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://png.pngtree.com/background/20230114/original/pngtree-blue-science-and-technology-starry-sky-business-corporate-advertising-poster-background-picture-image_2007446.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            background: rgba(148, 211, 228, 0.8);
+            padding: 2px;
+            position: fixed;
+            height: 100%;
+        }
+        nav a {
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        nav a:hover {
+            background: rgba(255, 183, 77, 0.8);
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            position: fixed;
+            width: calc(100% - 160px);
+            top: 0;
+            left: 160px;
+            z-index: 1000;
+        }
+        .top-bar div {
+            color: rgb(43, 218, 224);
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .top-bar .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .top-bar .user-info span {
+            margin-left: 10px;
+            color: white;
+        }
+        .top-bar .notifications {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .top-bar .notifications img {
+            width: 30px;
+            height: 30px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background: rgba(255, 183, 77, 0.8);
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .container {
+            margin-left: 170px;
+            margin-top: 100px;
+            padding: 20px;
+            color: white;
+        }
+        .welcome-title {
+            font-size: 80px; /* Taille agrandie */
+            font-family: 'Georgia', serif;
+            margin-bottom: 30px;
+            margin-left: 40px;
+        }
+        .system {
+            margin-left: 5px; /* Petit espace entre "our" et "System" */
+        }
+        .triangle {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent; /* Taille réduite */
+            border-right: 4px solid transparent; /* Taille réduite */
+            border-top: 8px solid orange; /* Triangle de couleur orange */
+            margin-left: 5px; /* Espace avant le triangle */
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div>
+        Reports
+        <div class="triangle"></div>
+    </div>
+    <div>
+        Performance Reports
+        <div class="triangle"></div>
+    </div>
+    <div>
+        Summary
+        <div class="triangle"></div>
+    </div>
+    <div class="notifications">
+        <img src="https://img.icons8.com/color/48/000000/appointment-reminders.png" alt="Notifications">
+        <span>3</span>
+    </div>
+    <div class="user-info">
+        <span>John Doe</span>
+        <div class="triangle"></div>
+    </div>
+</div>
+
+<div class="search-bar">
+    <input type="text" placeholder="Recherche...">
+    <button type="button">🔍</button>
+</div>
+
+<nav>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/calendar.png" class="icon" alt="Calendrier"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/clock.png" class="icon" alt="Heure"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/agenda.png" class="icon" alt="Agenda"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/home.png" class="icon" alt="Home"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/handshake.png" class="icon" alt="Handshake"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/audit.png" class="icon" alt="Audit Operations"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/user.png" class="icon" alt="User"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/user-group.png" class="icon" alt="3 Users"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/settings.png" class="icon" alt="Paramètres"><div class="triangle"></div></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/000000/search.png" class="icon" alt="Recherche"><div class="triangle"></div></a>
+</nav>
+
+<div class="container">
+    <h2 class="welcome-title">Welcome To Our<span class="system"> System</span></h2>
+</div>
+
+</body>
+</html>
